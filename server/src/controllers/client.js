@@ -1,47 +1,33 @@
 const ClientModel = require('../models/client')
 
 async function get(req, res) {
-    const clients = await ClientModel.find()
+    const { id } = req.params
+
+    const obj = id ? { _id: id } : null
+
+    const clients = await ClientModel.find(obj)
 
     res.send(clients)
 }
 
 async function post(req, res) {
-    let registeredClient = undefined
-    let ok = true
-
     const {
         name,
         email,
         phone,
         address
     } = req.body
-    
-    const clients = await ClientModel.find()
 
-    clients.forEach(client => {
-        if (email == client.email || phone == client.phone) {
-            ok = false
-        }
-    }) 
-
-    if (ok == true) {
-        const client = new ClientModel({
-            name,
-            email,
-            phone,
-            address
-        })
-    
-        client.save()
-    } else {
-        registeredClient = clients.find(client => email == client.email && phone == client.phone)
-    }
-
-    res.send({
-        ok,
-        registeredClient
+    const client = new ClientModel({
+        name,
+        email,
+        phone,
+        address
     })
+
+    client.save()
+
+    res.send(client)
 }
 
 module.exports = {
