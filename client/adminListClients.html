@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Admin</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <style>
+        body {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+    <aside>
+        <header>
+            <h1>Vinont</h1>
+        </header>
+        <ul>
+            <li>
+                <a href="#" id="listClients">Listar Clientes</a>
+            </li>
+            <li>
+                <a href="#" id="listOrders">Listar Pedidos</a>
+            </li>
+            <li>
+                <a href="./adminListProducts.html" id="listProducts">Listar Produtos</a>
+            </li>
+            <li>
+                <a href="./adminRegisterProducts.html" id="postProduct">Registrar Produtos</a>
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Painel de Controle</h2>
+        <span id="msg"></span>
+
+        <h3>Lista de Clientes</h3>
+        <ul id="clients">
+
+        </ul>
+    </main>
+
+    <script src="src/js/adminListClients.js"></script>
+</body>
+</html>

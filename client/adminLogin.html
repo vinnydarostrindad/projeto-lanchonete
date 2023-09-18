@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <style>
+        input.erro::placeholder {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Vinont</h1>
+    </header>
+
+    <main>
+        <h2>Login</h2>
+        <form id="form">
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" placeholder="Digite nome e sobrenome">
+            </div>
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha">
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </main>
+
+    <script src="src/js/adminLogin.js"></script>
+</body>
+</html>
