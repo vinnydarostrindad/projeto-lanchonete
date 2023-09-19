@@ -26,7 +26,24 @@ function post(req, res) {
     res.send(product)
 }
 
+async function put(req, res) {
+    console.log(req.params)
+    const { id }  = req.params
+
+    const product = await ProductModel.findByIdAndUpdate({ _id: id}, req.body, { new: true })
+
+    res.send(product)
+}
+
+async function remove(req, res) {
+    const { id } = req.params
+
+    await ProductModel.findByIdAndDelete(id)
+}
+
 module.exports = {
     get,
-    post
+    post,
+    put,
+    remove
 }

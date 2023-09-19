@@ -6,8 +6,8 @@ form.onsubmit = function(e) {
 
     let formCheck = true
 
-    const name = form.name
-    const price = form.price
+    const name = this.name
+    const price = this.price
     
     if (name.value == "") {
         name.placeholder = 'Preencha todos os campos'
