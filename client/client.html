@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça seu pedido!</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <style>
+        body {
+            display: flex;
+        }
+
+        main {
+            width: 750px;
+        }
+
+        main ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        main li {
+            width: 175px;
+            height: 200px;
+            border: 1px solid #fff;
+            list-style: none;
+        }
+
+        main li div {
+            height: 125px;
+            border-bottom: 1px solid #fff;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <aside>
+        <header>
+            <h1>Vinont</h1>
+            <span id="msg"></span>
+            <select name="status" id="status">
+                <option value="Pendente">Pendente</option>
+                <option value="Em preparo">Em preparo</option>
+                <option value="Em entrega">E entrega</option>
+                <option value="Entregue">Entregue</option>
+                <option value="Cancelado">Cancelado</option>
+            </select>
+        </header>
+        <ul>
+            <li>
+                <a href="./client.html" id="products">Produtos</a>
+            </li>
+            <li>
+                <a href="./clientOrders.html" id="orders">Pedidos</a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <h2>Produtos</h2>
+        <ul id="productList">
+            
+        </ul>
+    </main>
+
+    <script src="src/js/client.js"></script>
 </body>
 </html>

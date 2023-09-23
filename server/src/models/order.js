@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
-    clientCode: String,
-    productCode: String,
+    clientId: String,
+    productId: String,
     date: String,
     status: String
 })

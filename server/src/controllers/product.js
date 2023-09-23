@@ -4,7 +4,7 @@ async function get(req, res) {
     const { id } = req.params
 
     const obj = id ? { _id: id } : null
-
+    
     const products = await ProductModel.find(obj)
 
     res.send(products)
@@ -27,10 +27,9 @@ function post(req, res) {
 }
 
 async function put(req, res) {
-    console.log(req.params)
     const { id }  = req.params
 
-    const product = await ProductModel.findByIdAndUpdate({ _id: id}, req.body, { new: true })
+    const product = await ProductModel.findByIdAndUpdate({ _id: id }, req.body, { new: true })
 
     res.send(product)
 }
